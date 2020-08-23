@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-col>
+      <ion-row>
+        <ion-label>Title</ion-label>
+        <ion-input [value]="movie.title"></ion-input>
+      </ion-row>
+      <ion-row>
+        <ion-label>Description</ion-label>
+        <ion-input [value]="movie.description"></ion-input>
+      </ion-row>
+      <ion-row>
+        <ion-label>Image</ion-label>
+        <ion-input [value]="movie.imgURL"></ion-input>
+      </ion-row>
+    </ion-col>
+  </ion-grid>
+
+</ion-content>
