@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let movies of movie" [routerLink]="['/movies', movies.movieID]">
+      <ion-avatar slot="start">
+        <ion-img [src]="movies.imgURL"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{movies.title}}
+      </ion-label>
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
