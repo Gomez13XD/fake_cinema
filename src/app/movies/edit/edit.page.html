@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>edit</ion-title>
+    <ion-button slot="start">
+      <ion-back-button defaultHref="/movies"></ion-back-button>
+    </ion-button>
+    <ion-title>Edit movie</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,18 +11,24 @@
   <ion-grid>
     <ion-col>
       <ion-row>
-        <ion-label>Title</ion-label>
-        <ion-input [value]="movie.title"></ion-input>
+        <ion-item>
+          <ion-label>Title</ion-label>
+          <ion-input [value]="movie.title" #newTitle id="nTitle" name="nT"></ion-input>
+        </ion-item>
       </ion-row>
       <ion-row>
-        <ion-label>Description</ion-label>
-        <ion-input [value]="movie.description"></ion-input>
+        <ion-item>
+          <ion-label>Description</ion-label>
+          <ion-input [value]="movie.description" #newDesc></ion-input>
+        </ion-item>
       </ion-row>
       <ion-row>
-        <ion-label>Image</ion-label>
-        <ion-input [value]="movie.imgURL"></ion-input>
+        <ion-item>
+          <ion-label>Image URL</ion-label>
+          <ion-input type="url" [value]="movie.imgURL" #newImg></ion-input>
+        </ion-item>
       </ion-row>
     </ion-col>
+    <ion-button (click)="editMovie(newTitle, newDesc, newImg)">Save</ion-button>
   </ion-grid>
-
 </ion-content>

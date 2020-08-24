@@ -35,12 +35,12 @@ const routes: Routes = [
       {
         path: ':movieID/edit',
         loadChildren: () => import('./movies/edit/edit.module').then( m => m.EditPageModule)
+      },
+      {
+        path: ':movieID/rate',
+        loadChildren: () => import('./movies/rate/rate.module').then( m => m.RatePageModule)
       }
     ]
-  },
-  {
-    path: 'edit',
-    loadChildren: () => import('./movies/edit/edit.module').then(m => m.EditPageModule)
   },
 ];
 

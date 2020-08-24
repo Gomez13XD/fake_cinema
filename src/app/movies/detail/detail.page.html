@@ -17,8 +17,8 @@
       </ion-col>
       <ion-col>
         <ion-text>{{movie.rate}}/10</ion-text>
-        <ion-button>
-          <ion-icon name="star-outline"></ion-icon>
+        <ion-button [routerLink]="['/movies', movie.movieID,'rate']">
+          <ion-icon color="warning" name="star"></ion-icon>
         </ion-button>
       </ion-col>
     </ion-row>

@@ -20,7 +20,6 @@ export class LoginPage implements OnInit {
   async login(){
     const user = await this.authSrv.login(this.user);
     if (user){
-      console.log('Logeado');
       this.router.navigateByUrl('/home');
     }
   }

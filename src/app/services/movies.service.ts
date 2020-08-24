@@ -26,15 +26,35 @@ export class MoviesService {
   constructor() { }
 
   getmovies(){
-    return [...this.movie]
+    return [...this.movie];
   }
 
   getmovie(movieId: string){
     return {
-      ...this.movie.find(movie =>{
-        return movie.movieID === movieId
+      ...this.movie.find(movie => {
+        return movie.movieID === movieId;
       })
-    }
+    };
+  }
+
+  editmovie(movieId: string, movieTitle: string, movieDesc: string, movieImg: string){
+    this.movie.map(dato => {
+      if (dato.movieID === movieId){
+        dato.title = movieTitle;
+        dato.description = movieDesc;
+        dato.imgURL = movieImg;
+      }
+      return dato;
+    });
+  }
+
+  ratemovie(movieId: string, movieRate: number){
+    this.movie.map(dato => {
+      if (dato.movieID === movieId){
+        dato.rate = movieRate;
+      }
+      return dato;
+    });
   }
 
 }
