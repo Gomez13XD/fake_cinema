@@ -20,8 +20,12 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-text>Rate: {{rangeVal}}/10</ion-text>
+      <ion-col>
+        <ion-text class="ion-text-center">
+          <h3>Rate: {{rangeVal}}/10</h3>
+        </ion-text>
+      </ion-col>
     </ion-row>
-    <ion-button (click)="rate()">Rate</ion-button>
+    <ion-button color="light" fill="outline" (click)="rate()">Rate</ion-button>
   </ion-grid>
 </ion-content>

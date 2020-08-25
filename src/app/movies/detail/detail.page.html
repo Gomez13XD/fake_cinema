@@ -3,8 +3,11 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/movies"></ion-back-button>
     </ion-buttons>
+    <ion-title>{{movie.title}}</ion-title>
     <ion-buttons slot="end" [routerLink]="['/movies', movie.movieID,'edit']">
-      <ion-icon name="pencil-outline"></ion-icon>
+      <ion-button>
+        <ion-icon name="pencil-outline"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -13,12 +16,10 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-title>{{movie.title}}</ion-title>
-      </ion-col>
-      <ion-col>
-        <ion-text>{{movie.rate}}/10</ion-text>
-        <ion-button [routerLink]="['/movies', movie.movieID,'rate']">
+        <ion-button class="rate" fill="clear" [routerLink]="['/movies', movie.movieID,'rate']">
+          <ion-text>{{movie.rate}}/10 </ion-text>
           <ion-icon color="warning" name="star"></ion-icon>
+          <ion-text> Rate it!!</ion-text>
         </ion-button>
       </ion-col>
     </ion-row>

@@ -6,6 +6,7 @@
 
 <ion-content>
   <ion-card>
+    <img src='{{loginImg}}' (click)="changeImg()">
     <ion-card-content>
       <ion-list class="form-input">
         <ion-item>
@@ -14,14 +15,14 @@
         <ion-item>
           <ion-input type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
         </ion-item>
-        <ion-item-divider>
-          <ion-button size="large" (click)="login()">
+        <ion-row>
+          <ion-button color="light" fill="outline" size="large" (click)="login()">
             Login
           </ion-button>
-        </ion-item-divider>
-        <ion-item-divider>
-          <ion-button href="/register">Register</ion-button>
-        </ion-item-divider>
+        </ion-row>
+        <ion-row>
+          <ion-button color="light" fill="outline" href="/register">Register</ion-button>
+        </ion-row>
       </ion-list>
     </ion-card-content>
   </ion-card>

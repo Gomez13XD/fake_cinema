@@ -22,7 +22,8 @@
         <ion-col>
           <ion-item>
             <ion-label>Description</ion-label>
-            <ion-input [value]="movie.description" #newDesc></ion-input>
+            <ion-textarea [value]="movie.description" #newDesc></ion-textarea>
+<!--            <ion-input [value]="movie.description" #newDesc></ion-input>-->
           </ion-item>
         </ion-col>
       </ion-row>
@@ -35,6 +36,6 @@
         </ion-col>
       </ion-row>
     </ion-col>
-    <ion-button (click)="editMovie(newTitle, newDesc, newImg)">Save</ion-button>
+    <ion-button color="light" fill="outline" (click)="editMovie(newTitle, newDesc, newImg)">Save</ion-button>
   </ion-grid>
 </ion-content>

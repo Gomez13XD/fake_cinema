@@ -6,3 +6,19 @@ ion-button{
 ion-title{
   text-align: center;
 }
+
+img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ion-card {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  top: 15%;
+}
