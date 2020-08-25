@@ -1,23 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Fake Cinema</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
     <ion-card-content>
-      <ion-item>
-        <ion-input type="email" placeholder="Email" [(ngModel)]="user.email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
-      </ion-item>
-      <ion-item-divider>
-        <ion-button size="large" slot="end" (click)="login()">
-          Login
-        </ion-button>
-      </ion-item-divider>
+      <ion-list class="form-input">
+        <ion-item>
+          <ion-input type="email" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+        <ion-item-divider>
+          <ion-button size="large" (click)="login()">
+            Login
+          </ion-button>
+        </ion-item-divider>
+        <ion-item-divider>
+          <ion-button href="/register">Register</ion-button>
+        </ion-item-divider>
+      </ion-list>
     </ion-card-content>
   </ion-card>
 </ion-content>

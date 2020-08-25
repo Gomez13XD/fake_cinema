@@ -1,11 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-button slot="start">
+    <ion-buttons slot="start">
       <ion-back-button defaultHref="/movies"></ion-back-button>
-    </ion-button>
-    <ion-button slot="end" [routerLink]="['/movies', movie.movieID,'edit']">
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/movies', movie.movieID,'edit']">
       <ion-icon name="pencil-outline"></ion-icon>
-    </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -29,12 +29,14 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-text>Description</ion-text>
+        <ion-text>
+          <h3>Description</h3>
+        </ion-text>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-text>{{movie.description}}</ion-text>
+        <ion-text><p>{{movie.description}}</p></ion-text>
       </ion-col>
     </ion-row>
   </ion-grid>
